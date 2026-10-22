@@ -2,7 +2,7 @@
 
 按 **最终建模**（`warm_bedroom_v2.blend`，2026-10-20 16:56）烘焙的实时 3D 卧室。相机是真 **6 自由度自由飞行**（位置 X/Y/Z 含升降 + 偏航/俯仰/侧倾），不是固定机位旋转。可切换 5 个时间段与 4 种天气；雨天有实时雨粒子；窗外是真几何景观。
 
-> **在线看**：<https://ryranyi.github.io/dsh-warm-bedroom/website/>  
+> **在线看**：<https://ryranyi.github.io/dsh_blender_warmbedroom/website/>  
 > **本地看**：双击 [`website/index.html`](website/index.html)（无服务器依赖）。  
 > **说明书**：[`README.html`](README.html)。
 
@@ -10,7 +10,7 @@
 
 ## 介绍片（60 秒 · 1080p · 中文字幕）
 
-成片：<https://github.com/RYranyi/dsh-warm-bedroom/blob/main/成品/暖居卧室_介绍片_60秒_中文字幕.mp4>
+成片：<https://github.com/RYranyi/dsh_blender_warmbedroom/blob/main/成品/暖居卧室_介绍片_60秒_中文字幕.mp4>
 （[`成品/`](成品/) 目录下有 mp4 与同时间轴 `.srt`；换 BGM 重压时直接用 srt）
 
 
