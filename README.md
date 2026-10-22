@@ -6,7 +6,7 @@
 > **本地看**：双击 [`website/index.html`](website/index.html)（无服务器依赖）。  
 > **说明书**：[`README.html`](README.html)。
 
-![Live 3D bedroom](renders_v2/previews/website_desktop.png)
+![Live 3D bedroom](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_desktop.png)
 
 ## 介绍片（60 秒 · 1080p · 中文字幕）
 
@@ -58,11 +58,13 @@
 
 | 桌面预览 | 夜晚 | 窗外 |
 | --- | --- | --- |
-| ![desktop](renders_v2/previews/website_desktop.png) | ![night](renders_v2/previews/website_night.png) | ![window](renders_v2/previews/website_window.png) |
+| ![desktop](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_desktop.png) | ![night](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_night.png) | ![window](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_window.png) |
 
 | 暴雨 | 电视 | 全屋 |
 | --- | --- | --- |
-| ![storm](renders_v2/previews/website_storm.png) | ![tv](renders_v2/previews/website_tv.png) | ![overview](renders_v2/previews/website_overview.png) |
+| ![storm](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_storm.png) | ![tv](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_tv.png) | ![overview](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_warmbedroom/main/renders_v2/previews/website_overview.png) |
+
+> 预览图经 `gh-proxy.com` 镜像加载：GitHub 会把外链图片转由 `camo.githubusercontent.com` 在服务端抓取，因此本地即使无法直连 `raw.githubusercontent.com` 也能正常显示。直链：`renders_v2/previews/`。
 
 ## 先看这里
 
