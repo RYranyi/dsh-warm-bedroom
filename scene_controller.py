@@ -799,10 +799,14 @@ def get_lighting_state():
 # Chibi maid integration (pure meshes, no armature in the supplied file)
 # ---------------------------------------------------------------------------
 MAID_SOURCE_CANDIDATES = [
-    r"E:\dsh\bedroom_scene\assets\chibi_maid_USER.blend",
+    # 1) 与当前 .blend 同级的 assets/（最通用）
     os.path.join(os.path.dirname(bpy.data.filepath), "assets", "chibi_maid_USER.blend")
     if bpy.data.filepath else "",
-    r"E:\dsh\maid_chibi\procedural_v2\chibi_maid_USER.blend",
+    # 2) 与 scene_controller.py 同级的 assets/
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "chibi_maid_USER.blend")
+    if "__file__" in globals() else "",
+    # 3) 环境变量覆盖，便于把模型放在项目外
+    os.environ.get("WARM_BEDROOM_MAID_BLEND", ""),
 ]
 MAID_SOURCE = next((p for p in MAID_SOURCE_CANDIDATES if p and os.path.exists(p)),
                    MAID_SOURCE_CANDIDATES[0])

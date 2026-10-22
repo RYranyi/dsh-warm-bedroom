@@ -14,11 +14,14 @@ This script restores all four:
 
 Quality unchanged: 1920x1080, 10 samples, adaptive, OptiX denoise.
 """
-import bpy, os, time
+import bpy, os, sys, time
 from mathutils import Vector
 
-BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_v2.blend"
-OUT = r"E:\dsh\.scratch\video\frames"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+BLEND = paths.blend()
+OUT = paths.scratch("video", "frames")
 FPS = 24
 SEG_FRAMES = 144
 RES = (1920, 1080)

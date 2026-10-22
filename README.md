@@ -152,8 +152,16 @@
 
 ## 可复现
 
+所有脚本通过 `source/paths.py` 解析路径，**不含任何硬编码绝对路径**，克隆到任何目录都能跑。
+默认项目根 = 脚本所在目录的上一级；也可用环境变量指定：
+
 ```powershell
-# 路径按你自己的环境改（<BLENDER> / <PYTHON> 换成实际安装位置）
+$env:WARM_BEDROOM_ROOT    = "D:\my\warm-bedroom"   # 项目根
+$env:WARM_BEDROOM_SCRATCH = "D:\tmp\wb"            # 渲染/编码的临时产物目录
+```
+
+```powershell
+# <BLENDER> / <PYTHON> 换成你自己的安装位置
 
 # 1) 从 .blend 解出两张源图到 textures/（.blend 里的图片是内嵌的）
 & "<BLENDER>" -b --python source/unpack_textures.py
@@ -171,6 +179,9 @@ start website/index.html
 > `website/assets/`（GLB + 8 张 atlas 的未打包版本）体积 31 MB，仓库里**没有**提交；
 > 需要它时用 `source/restore_assets.py` 从 `website/assets.js` 无损还原（字节与原件一致），
 > 或跑上面第 1–2 步重新烘焙。
+>
+> 渲染/编码类脚本（`render_*` / `reframe_*` / `concat_video` / `burn_and_swap_*`）的中间产物默认写到
+> `<项目根>/.scratch/`，该目录已在 `.gitignore` 中。
 
 ## 已知取舍
 

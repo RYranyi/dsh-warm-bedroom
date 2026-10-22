@@ -12,11 +12,14 @@ Steps
   3. copy the burned PNGs over decoded f_0665..f_0794
   4. re-encode the 1444-frame sequence
 """
-import subprocess, os, shutil, codecs
+import subprocess, os, shutil, codecs, sys
 
-QA = r"E:\dsh\.scratch\qa"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+QA = paths.scratch("qa")
 FRAMES = os.path.join(QA, "frames")
-NEW = r"E:\dsh\.scratch\video\frames\seg_04"
+NEW = paths.scratch("video", "frames", "seg_04")
 SRT = os.path.join(QA, "block6.srt")
 BURNED_MKV = os.path.join(QA, "block6_burned.mkv")
 BURNED_DIR = os.path.join(QA, "block6_burned")

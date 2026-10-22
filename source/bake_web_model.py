@@ -10,10 +10,13 @@ Fixes over the previous bake:
     can change with time and weather
   * 4096 atlases for the surfaces that get close to the camera
 """
-import bpy, os, time
+import bpy, os, sys, time
 
-USER_BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_v2.blend"
-OUT = r"E:\dsh\bedroom_scene\website\assets"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+USER_BLEND = paths.blend()
+OUT = paths.root("website", "assets")
 TEX = os.path.join(OUT, "textures")
 os.makedirs(TEX, exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=USER_BLEND)

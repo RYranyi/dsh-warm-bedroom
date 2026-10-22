@@ -6,10 +6,13 @@ lights are children of a parent empty/object, so the world position must be
 written through `matrix_world`.  This pass also reports the parent chain so the
 fix is verifiable.
 """
-import bpy
+import bpy, os, sys
 from mathutils import Vector, Matrix
 
-BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_v2.blend"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+BLEND = paths.blend()
 bpy.ops.wm.open_mainfile(filepath=BLEND)
 
 

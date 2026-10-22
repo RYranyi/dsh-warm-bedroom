@@ -1,10 +1,13 @@
-import bpy, json, os
+import bpy, json, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 # Restore textures/ from the images packed inside the final .blend.
 # Blender image datablock names sometimes lack the extension (TV_Screen_Result),
 # while build_bedroom_v2.py expects the on-disk name to keep ".png".
-BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_v2.blend"
-TEX = r"E:\dsh\bedroom_scene\textures"
+BLEND = paths.blend()
+TEX = paths.root("textures")
 
 bpy.ops.wm.open_mainfile(filepath=BLEND)
 os.makedirs(TEX, exist_ok=True)

@@ -12,9 +12,12 @@ Modes (arg after --):
 import bpy, os, sys, json, time, math
 from mathutils import Vector
 
-BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_v2.blend"
-OUT = r"E:\dsh\.scratch\video\frames\seg_04"
-CAND = r"E:\dsh\.scratch\qa"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+BLEND = paths.blend()
+OUT = paths.scratch("video", "frames", "seg_04")
+CAND = paths.scratch("qa")
 NF = 130
 FPS = 24
 RES = (1920, 1080)

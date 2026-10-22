@@ -1,12 +1,16 @@
 # Adds a real Blender particle rain system to a COPY of the user's final scene.
 # Saves warm_bedroom_rain.blend and renders a preview / final rainy still.
-import bpy, os, math
+import bpy, os, sys, math
 from mathutils import Vector
 
-USER = r"E:\dsh\bedroom_scene\user_edit_20261020_1421.blend"
-OUT_BLEND = r"E:\dsh\bedroom_scene\warm_bedroom_rain.blend"
-OUT_IMG = r"E:\dsh\bedroom_scene\renders_v2\hero_rain_2560.png"
-PREVIEW = r"E:\dsh\.scratch\web3d\rain_preview.png"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+# 在最终工程的副本上加雨（不覆盖原文件）
+USER = paths.blend()
+OUT_BLEND = paths.root("warm_bedroom_rain.blend")
+OUT_IMG = paths.root("renders_v2", "hero_rain_2560.png")
+PREVIEW = paths.scratch("web3d", "rain_preview.png")
 bpy.ops.wm.open_mainfile(filepath=USER)
 sc = bpy.context.scene
 

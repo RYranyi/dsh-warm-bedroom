@@ -6,7 +6,10 @@ Timeline (24 fps):
   10 x segments   130 fr = 5.4167 s  each
   total          1444 fr = 60.1667 s
 """
-import codecs
+import codecs, os, sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 PRO_SEC = 144 / 24.0
 SEG_FRAMES = 130
@@ -47,7 +50,8 @@ for i, text in enumerate(LINES):
     end = bounds[i + 1] if i + 1 < len(bounds) else PRO_SEC + (len(LINES) - 1) * SEG_SEC
     blocks.append("%d\n%s --> %s\n%s\n" % (i + 1, ts(start), ts(end), text))
 
-out = r"E:\dsh\.scratch\video\subtitles.srt"
+out = paths.scratch("video", "subtitles.srt")
+os.makedirs(os.path.dirname(out), exist_ok=True)
 with codecs.open(out, "w", "utf-8-sig") as f:
     f.write("\n".join(blocks))
 

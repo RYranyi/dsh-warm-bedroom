@@ -5,12 +5,15 @@
   frames/seg_00..seg_09/frame_0000..0129.png  first 130 fr each = 5.4167 s
   total 1444 fr = 60.167 s
 """
-import subprocess, os
+import subprocess, os, sys
 
-FRAMES = r"E:\dsh\.scratch\video\frames"
-SRT = r"E:\dsh\.scratch\video\subtitles.srt"
-OUT = r"E:\dsh\.scratch\video\warm_bedroom_intro.mp4"
-WORK = r"E:\dsh\.scratch\video\concat_work"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+FRAMES = paths.scratch("video", "frames")
+SRT = paths.scratch("video", "subtitles.srt")
+OUT = paths.scratch("video", "warm_bedroom_intro.mp4")
+WORK = paths.scratch("video", "concat_work")
 FPS = 24
 W, H = 1920, 1080
 PRO_FRAMES = 144

@@ -15,7 +15,10 @@ appends it when writing TV_Screen_Result.png.
 """
 import base64, json, os, re, sys
 
-ROOT = r"E:\dsh\bedroom_scene"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+ROOT = paths.ROOT
 ASSETS_JS = os.path.join(ROOT, "website", "assets.js")
 WEB_ASSETS = os.path.join(ROOT, "website", "assets")
 TEX = os.path.join(ROOT, "textures")

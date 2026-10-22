@@ -13,14 +13,18 @@ import bpy
 import bmesh
 import math
 import os
+import sys
 import random
 from mathutils import Vector, Euler, Matrix
 from mathutils import noise as mnoise
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
 # ---------------------------------------------------------------------------
 # Paths / constants
 # ---------------------------------------------------------------------------
-ROOT = r"E:\dsh\bedroom_scene"
+ROOT = paths.ROOT
 TEX_DIR = os.path.join(ROOT, "textures")
 RENDER_DIR = os.path.join(ROOT, "renders")
 BLEND_PATH = os.path.join(ROOT, "warm_bedroom_v2.blend")

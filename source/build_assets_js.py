@@ -1,8 +1,11 @@
 # Rebuild the single-file offline asset bundle used by website/index.html.
 # Reads website/assets/scene.glb + textures + art/tv images and writes assets.js.
-import base64, json, os
+import base64, json, os, sys
 
-ROOT = r"E:\dsh\bedroom_scene\website"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
+ROOT = paths.root("website")
 TEX = os.path.join(ROOT, "assets", "textures")
 
 def b64(path):
