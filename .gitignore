@@ -1,0 +1,35 @@
+# --- OS / editor ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# --- Blender 自动备份与临时产物 ---
+*.blend1
+*.blend2
+*.blend@
+render_*.tmp
+
+# --- 渲染/编码过程的中间产物（体积大且可重建）---
+# 成片刻意放在 成品/ 下并已提交（76 MB）；下面这些是分帧与分段
+frames/
+concat_work/
+*.mkv
+*.log
+
+# --- Web 构建中间件（31 MB，可由 assets.js 无损还原）---
+# 需要时跑：python source/restore_assets.py
+website/assets/
+
+# --- 临时目录 ---
+.scratch/
+tmp/
